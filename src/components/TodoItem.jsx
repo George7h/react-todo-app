@@ -43,9 +43,10 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {  const [e
             />
           </button>
         )}
+        {user && (
       <button onClick={() => delTodo(itemProp.id)}>
         <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
-      </button>      
+      </button>   )}   
         <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
         </span>
