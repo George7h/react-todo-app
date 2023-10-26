@@ -34,20 +34,33 @@ const Navbar = () => {
         {link.path === 'login' ? (
           !user && (
             <li>
-              <NavLink to={link.path}>{link.text}</NavLink>
+             <NavLink
+  to={link.path}
+  onClick={() => setNavbarOpen(false)}
+>
+  {link.text}
+</NavLink>
             </li>
           )
           ) : link.path === 'profile' ? (
             user && (
               <li>
-                <NavLink to={link.path}>
-                  {link.text}
-                </NavLink>
+                <NavLink
+  to={link.path}
+  onClick={() => setNavbarOpen(false)}
+>
+  {link.text}
+</NavLink>
               </li>
             )
           ) : (
             <li>
-              <NavLink to={link.path}>{link.text}</NavLink>
+              <NavLink
+  to={link.path}
+  onClick={() => setNavbarOpen(false)}
+>
+  {link.text}
+</NavLink>
           </li>
         )}
       </React.Fragment>
