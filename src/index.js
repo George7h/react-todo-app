@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './App.css'
 import TodoApp from './components/TodoApp';
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router, HashRouter } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter>
     <TodoApp />
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 );
 
