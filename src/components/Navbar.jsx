@@ -31,9 +31,17 @@ const Navbar = () => {
               <NavLink to={link.path}>{link.text}</NavLink>
             </li>
           )
-        ) : (
-          <li>
-            <NavLink to={link.path}>{link.text}</NavLink>
+          ) : link.path === 'profile' ? (
+            user && (
+              <li>
+                <NavLink to={link.path}>
+                  {link.text}
+                </NavLink>
+              </li>
+            )
+          ) : (
+            <li>
+              <NavLink to={link.path}>{link.text}</NavLink>
           </li>
         )}
       </React.Fragment>
