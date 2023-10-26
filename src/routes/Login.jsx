@@ -25,11 +25,12 @@ const Login = () => {
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="username"
+            placeholder="Username"
             value={username}
+            className={styles.textInput}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <button>Login</button>
+          <button className={styles.login}>Login</button>
         </form>
       </div>
     </div>
